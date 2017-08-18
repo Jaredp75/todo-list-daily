@@ -1,0 +1,6 @@
+body {
+  background: grey;
+  font-family: sans-serif;
+  display: flex;
+  align-content: center;
+}
