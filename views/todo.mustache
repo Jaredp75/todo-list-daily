@@ -19,52 +19,16 @@
 
 
 
-
-
-
-
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-12">
-        <form action="/" method="post">
-        <input type="text" name="pending" placeholder="Add a new item...">
-        <button id=subbtn type="submit">Add</button>
-      </form>
-
-
       <h1>My To Do List</h1>
 
-      <ul class="pending">
-        {{#list}}
-          {{#pending}}
-          <li>
-
-            <form action="/done" method="post">
-            <button type="submit">Complete</button>
-            </form>
-            {{pending}}
-
-          </li>
-          {{/pending}}
-        {{/list}}
-
-      </ul>
-      <h1>Completed Items</h1>
-      <ul class="complete">
-        {{#list}}
-          {{#complete}}
-          <li>
-            {{complete}}
-          </li>
-          {{/complete}}
-        {{/list}}
-      </ul>
-
-
-
-        </div>
+      <div class="">
+        <ul>
+          {{#displayList}}
+          <input type="checkbox" class="task" name="" value=""/>{{.}}<br />
+          {{/displayList}}
+        </ul>
       </div>
-    </div>
+
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
